@@ -1,0 +1,19 @@
+# Entrada de dados
+qtd_rodas = int(input("Digite a quantidade de rodas do veículo: "))
+peso_bruto = float(input("Digite o peso bruto do veículo (em kg): "))
+qtd_pessoas = int(input("Digite a quantidade de pessoas que o veículo comporta: "))
+
+# Classificação da categoria
+if qtd_rodas == 2 or qtd_rodas == 3:
+    print("Categoria de habilitação recomendada: A")
+elif qtd_rodas >= 4:
+    if qtd_pessoas <= 8 and peso_bruto <= 3500:
+        print("Categoria de habilitação recomendada: B")
+    elif 3500 < peso_bruto <= 6000:
+        print("Categoria de habilitação recomendada: C")
+    elif qtd_pessoas > 8:
+        print("Categoria de habilitação recomendada: D")
+    elif peso_bruto > 6000:
+        print("Categoria de habilitação recomendada: E")
+else:
+    print("Quantidade de rodas inválida para classificação.")
